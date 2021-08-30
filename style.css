@@ -75,3 +75,19 @@
     background-color:#ded4c0;
     box-shadow: 1px 1px #494542;
 }
+
+#autoComplete{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    background-color: white;
+    margin-top: 11.5em;
+    width: 14.4em;
+    height: 1.3em;
+}
+
+.autoCompleteResult{
+    padding-left: 0.3em;
+    margin-top: 0.6em;
+}
