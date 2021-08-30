@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#trainPicture{
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
+    width: 32em;
+    opacity: 80%;
+}
+
+#contentSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    top: 10em; /* ändra när content är tillagt */
+
+    z-index: 0;
+    position: relative;
+}
+
+@font-face{
+    font-family: spartan;
+    src: url("fonts/LeagueSpartan-Bold.otf")
+}
+
+
+#heading{
+    font-size: 3em;
+    font-family: spartan;
+    text-shadow: 2px 2px #494542;
+    color: #ded4c0;
+}
+
+#subheader{
+    font-size: 1.4em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 1px 1px #494542;
+    margin-bottom: 1em;
+}
+
+.inputHeaders{
+    font-family: 'Lucida Sans', Arial, sans-serif ;
+    font-size: 1.3em;
+    text-shadow: 1px 1px #494542;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.inputFields{
+    width: 45%;
+    border-radius: 4px;
+    border-width: 0.1em;
+    height: 2em;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}
+
+#searchButton{
+    font-size: 1em;
+    font-family: 'Lucida Sans', Arial, sans-serif ;
+    width: 8em;
+    height: 2.2em;
+    margin-top: 1em;
+
+    border-radius: 20px;
+    border-width: 0px;
+    background-color:#ded4c0;
+    box-shadow: 1px 1px #494542;
+}

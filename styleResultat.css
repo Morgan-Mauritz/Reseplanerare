@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#busStop{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 90%;
+}
+
+#HeaderText{
+    position: relative;
+    margin-top: 4%;
+    color: #ded4c0;
+    margin-bottom: 0.6em;
+}
+
+#bodyContent{
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    background-color: #efece5;
+    height: 100%;
+    width: 100%;
+    padding-top: 2em;
+    flex-direction: column;
+    align-items: center;
+}
