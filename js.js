@@ -55,7 +55,6 @@ function searchButton()
 }
 
 //RESULTAT.HTML
-
 window.onload = function() 
 {
     loadData();
