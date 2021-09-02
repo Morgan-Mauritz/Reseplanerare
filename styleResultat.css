@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 0.8em;
 }
 
 #busStop{
@@ -32,5 +33,41 @@
     width: 100%;
     padding-top: 2em;
     flex-direction: column;
+    padding-left: 2em;
     align-items: center;
+}
+
+.finalResultDiv{
+    display: grid;
+    grid-template-columns: 0.8fr 3fr 1.7fr;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', Arial, sans-serif ;
+    padding-bottom: 1em;
+}
+
+.finalResultNum{
+    display: grid;
+    grid-column: 1;
+}
+
+.finalResultStop{
+    display: grid;
+    grid-column: 2;
+    align-self: center;
+    font-size: 1em;
+}
+
+.finalResultTime{
+    display: grid;
+    grid-template-rows: 2;
+    grid-row:1;
+    grid-column: 3;
+    
+}
+
+.finalResultTimeWalking{
+    display: grid;
+    grid-row:2;
+    font-size: 0.6em;
 }

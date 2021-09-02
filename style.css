@@ -85,6 +85,7 @@
     margin-top: 11.5em;
     width: 14.4em;
     height: 1.3em;
+    overflow: auto;
 }
 
 .autoCompleteResult{
