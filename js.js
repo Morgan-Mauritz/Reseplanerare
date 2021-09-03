@@ -6,12 +6,11 @@ function hplOnChange(value)
         document.getElementById("autoComplete").style.display = "flex";
         let heightIndex = 1;
 
-        document.getElementById("autoComplete").innerHTML = "";
-
         fetch(`https://api.resrobot.se/v2/location.name?key=8632211a-4860-4bb0-9ba2-ccadddd95457&input=${value}&format=json&maxNo=7`)
         .then(resp => resp.json())
         .then(data => 
         {
+            document.getElementById("autoComplete").innerHTML = "";
             data.StopLocation.forEach(result => 
             {
                 document.getElementById("autoComplete").insertAdjacentHTML("beforeend", `<a class="autoCompleteResult" data-stationID="${result.id}" onClick="autoCompleteFunction(this)">${result.name}</a>`)
