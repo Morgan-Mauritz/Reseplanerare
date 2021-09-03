@@ -63,7 +63,7 @@
     grid-template-rows: 2;
     grid-row:1;
     grid-column: 3;
-    
+    padding-left: 0.5em;
 }
 
 .finalResultTimeWalking{

@@ -6,13 +6,8 @@ function hplOnChange(value)
         document.getElementById("autoComplete").style.display = "flex";
         let heightIndex = 1;
 
-        var child = document.getElementById("autoComplete").lastElementChild;
-        while(child) 
-        {
-            document.getElementById("autoComplete").removeChild(child);
-            child = document.getElementById("autoComplete").lastElementChild;
-        }
-        
+        document.getElementById("autoComplete").innerHTML = "";
+
         fetch(`https://api.resrobot.se/v2/location.name?key=8632211a-4860-4bb0-9ba2-ccadddd95457&input=${value}&format=json&maxNo=7`)
         .then(resp => resp.json())
         .then(data => 
@@ -86,9 +81,7 @@ function loadData()
                     <span class"finalResultStop">${result.direction} </span>
                     <span class="finalResultTime">
                         ${Math.floor((timeMs/1000)/60)} min
-                        <p class="finalResultTimeWalking">
-                            ${distance}
-                        </p>
+                        ${distance}
                     </span>
                 </div>`
             )
@@ -98,12 +91,16 @@ function loadData()
 
 function walkingDistance(minutes)
 {
-    if(Math.floor(minutes - window.localStorage.getItem("distance")) < 0)
+    if(Math.floor(minutes - window.localStorage.getItem("distance")) < 0 && window.localStorage.getItem("distance") != "")
     {
-        return `Hinner ej till </br> denna avgång`
+        return `<p class="finalResultTimeWalking">Hinner ej till </br> denna avgång</p>`
+    }
+    else if(window.localStorage.getItem("distance") == "")
+    {
+        return ""
     }
     else
     {
-        return `Gå om ${Math.floor(minutes - window.localStorage.getItem("distance"))} min`
+        return `<p class="finalResultTimeWalking">Gå om ${Math.floor(minutes - window.localStorage.getItem("distance"))} min</p>`
     }
 }
